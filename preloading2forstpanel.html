@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preloader</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: url('bg3.jpg') center/cover no-repeat fixed;
+    }
+    img {
+      scale: 0.4;
+      object-fit: cover;
+    }
+  </style>
+  <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+  <!-- Preloader GIF -->
+  <img src="loading2.gif" alt="Loading..." id="preloader">
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "Studentportal.html";
+    }, 5500);
+  </script>
+
+  
+<script src="animation.js"></script>
+</body>
+</html>
+

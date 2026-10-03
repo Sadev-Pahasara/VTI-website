@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+
+<div class="left" data-aos="fade-right" data-aos-delay="350" data-aos-duration="1300">
+        <img src="welcome 1.jpg" alt="welcomeimg" >
+</div>
+
+<div class="login-container" data-aos="zoom-in-left" data-aos-delay="350" data-aos-duration="1000">
+     <div class="logo">
+      <img src="logo1.1.png" alt=" Academy Logo"/>
+     </div>
+    
+    <h2 ><b>WELCOME TO SKILL PRO INSTITUTE</b></h2>
+   <form action="login.php" method="POST">
+    <input type="text" name="username" placeholder="Email/Username" required />
+      
+          <!--Password-->
+          <div class="password-wrapper">
+            <input type="password" id="password" name="password" placeholder="Password" required />
+            <img src="eye-crossed.png" id="togglePassword" class="toggle-eye" alt="Toggle Eye" />
+          </div>
+
+
+      <button type="submit"><b>LOGIN</b></button>
+      <p class="register-link">
+        At Skill Pro Institute, every skill learned, every challenge faced, 
+        and every step forward builds the path to success — together, we rise higher. <br>
+
+       <span style="font-size: 1rem;"> Don't have an account? <a href="form.html" style="text-decoration: none; color: red;"> Register... </a></span>
+
+      </p>
+    </form>
+</div>
+
+<script>
+  // Disable right click
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+</script>
+
+
+<script src="login.js"></script>
+<script src="animation.js"></script>
+  
+</body>
+</html>

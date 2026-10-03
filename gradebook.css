@@ -1,0 +1,92 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url('bg1.jpg') center/cover no-repeat;
+  margin: 0;
+  padding: 20px;
+  height: 1060px;
+}
+
+.gradebook-container {
+  max-width: 900px;
+  margin-top: 150px;
+  margin-left: 200px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.271);
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #13630b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  outline: none;
+  width: 100%;
+}
+
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.grade-table th,
+.grade-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.grade-table th {
+  background: #0d7b27;
+  color: #fff;
+}
+
+.grade-table input {
+  width: 70px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 18px;
+  background: #0aa731;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #0e5a21;
+}

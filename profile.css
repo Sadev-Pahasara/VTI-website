@@ -1,0 +1,118 @@
+.PCon{
+  display: flex;
+}
+
+.PCon form{
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background: #eee; 
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+form{
+  width: 410px;
+  line-height: 2.5rem;
+  border-right: 1px solid rgba(81, 81, 81, 0.759);
+}
+
+hr{
+  width: 400px;
+}
+
+.rightside{
+  line-height: 1.5rem;
+  margin-left: 25px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  width: 135px;
+  text-align: left;
+}
+
+.form-row input {
+  width: 250px;
+  height: 25px;
+  border: 1px solid rgba(170, 170, 170, 0.2);
+  background: #ffffff00;
+  border-radius: 5px;
+  padding: 4px;
+  margin-left: 0;
+}
+
+.onep2{
+  display: flex;
+}
+
+.two{
+  margin-top: 50px;
+}
+.secmain{
+  margin-top: 50px;
+}
+
+.secondContent{
+  margin-left: 25px;
+  margin-top: 50px;
+}
+.secondContent ul{
+  list-style: none;
+  display: flex;
+  margin-top: -40px;
+}
+
+.secondContent img{
+  width: 250px;
+}
+
+
+.save-btn{
+  width: 120px;
+  height: 20px;
+  font-size: 24rem;
+  background: #05b34a;
+  color: #eee;
+}
+
+.save-btn :hover{
+  background: #073c1c;
+  color: #eee;
+}

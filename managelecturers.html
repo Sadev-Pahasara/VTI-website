@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Lecturers</title>
+  <link rel="stylesheet" href="managelecturers.css">
+</head>
+<body>
+
+<div class="topbar">
+    <h1>Manage Lecturers</h1>
+</div>
+
+  <div class="container" style="margin-left: 100px;">
+    <button id="openModal">+ Add Lecturer</button>
+    <input type="text" id="searchInput" placeholder="🔍 Search by Lecturer ID or Name">
+
+    <!-- Lecturer Table -->
+    <table id="lecturerTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>User Name</th>
+          <th>Password</th>
+          <th>Faculty</th>
+          <th>Course</th>
+          <th>Module</th>
+          <th>Mobile Number</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be added dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+<div class="modal" id="lecturerModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2 id="modalTitle">Add Lecturer</h2>
+        <form id="lecturerForm" method="post" action="lecturers_backend.php">
+            <input type="hidden" id="editingId" name="editing_id">
+            
+            <label>Lecturer ID</label>
+            <input type="text" id="lecturerId" name="lecturerId" required>
+
+            <label>First Name</label>
+            <input type="text" id="lecturerFName" name="lecturerFName" required>
+
+            <label>Last Name</label>
+            <input type="text" id="lecturerLName" name="lecturerLName" required>
+
+            <label>Email</label>
+            <input type="email" id="lecturerEmail" name="lecturerEmail" required>
+
+            <label>User Name</label>
+            <input type="text" id="lecturerusername" name="lecturerusername" required>
+
+            <div class="password-wrapper">
+                <label>Password</label> <br>
+                <input type="password" id="lecturerpassword" name="lecturerpassword" required>
+                <img src="eye-crossed.png" id="togglePassword" class="toggle-eye" alt="Toggle Eye" /><br>
+            </div>
+
+            <label>Branch</label>
+            <select id="lecturerBranch" name="branch" required>
+                <option value="" disabled selected>Choose Branch</option>
+                <option value="colombo">Colombo Branch</option>
+                <option value="kandy">Kandy Branch</option>
+                <option value="matara">Matara Branch</option>
+            </select>
+
+            <!-- ADD THESE DROPDOWNS - THEY ARE MISSING IN YOUR HTML -->
+            <label>Faculty</label>
+            <select id="lecturerFaculty" name="faculty" required>
+                <option value="" disabled selected>Choose Faculty</option>
+                <!-- Options will be loaded dynamically -->
+            </select>
+
+            <label>Course</label>
+            <select id="lecturerCourse" name="course" required>
+                <option value="" disabled selected>Choose Course</option>
+                <!-- Options will be loaded dynamically -->
+            </select>
+
+            <label>Module</label>
+            <select id="lecturerModule" name="module" required>
+                <option value="" disabled selected>Choose Module</option>
+                <!-- Options will be loaded dynamically -->
+            </select>
+
+            <label>Mobile Number</label>
+            <input type="text" id="lecturerNumber" name="lecturerNumber" required>
+
+            <button type="submit" id="saveBtn">Save</button>
+        </form>
+    </div>
+</div>
+
+<script src="managelecturers.js"></script>
+</body>
+</html>

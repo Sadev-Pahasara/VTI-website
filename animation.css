@@ -1,0 +1,7 @@
+/* Import AOS base styles */
+@import url("https://unpkg.com/aos@2.3.4/dist/aos.css");
+
+/* Optional: customize animations */
+[data-aos] {
+  transition-property: transform, opacity;
+}

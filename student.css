@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-weight: 100;
+  background: url('bg3.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  background-color: #aaa6a600;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 100px;
+  z-index: 1;
+  border-bottom: #0b0b0b5f 2px solid;
+  border-radius: 0px 0px 10px 0px;
+}
+
+header h2{
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  list-style: none;
+  font-size: 19px;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+header img {
+  width: 30px;
+  height: auto;
+  border: 4px solid rgb(71, 227, 36);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.video-container {
+  width: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.video-container video {
+  width: 100%;
+  display: block;
+}
+
+#mainContent {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  margin-top: -30px;
+}
+
+.analizer {
+  text-align: left;
+  padding: 20px;
+  display: block;
+}
+
+.analizer h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+canvas {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.an {
+  width: 2250px;
+}
+
+.anaborder {
+  display: flex;
+  align-items: center;
+  background-color: #aaa6a600;
+  backdrop-filter: blur(10px);
+  border: #0b0b0b5f 2px solid;
+  border-radius: 10px;
+  width: 1100px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.stats {
+  margin-left: -200px;
+  margin-top: 5px;
+  background: #fff;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 55px 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: left;
+  width: 500px;
+  height: 295px;
+}
+
+.analizer .stats ul {
+  display: flex;
+  margin-left: -50px;
+}
+
+.analizer .stats ul li {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.analizer .stats ul li i {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.analizer .stats p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.stpnl {
+  display: flex;
+  gap: 25px;
+}
+
+.cal {
+  text-align: center;
+  width: 320px;
+  height: 400px;
+  background: #aaa6a600;
+  border: #0b0b0b5f 2px solid;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.incomingevents{
+  margin-top: -20px;
+}
+
+.incomingevents h3 {
+  font-size: 1.5rem;
+  margin-left: 25px;
+}
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lecturer_portal</title>
+    <link rel="stylesheet" href="adminportal.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <!-- icon link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    
+
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="menu" data-aos="fade-right" data-aos-delay="250" data-aos-duration="900">
+
+  <div class="logo">
+    <img src="logo1.1.png" alt="logo">
+    <h5>Empower Knowledge...</h5>
+  </div>
+  
+  <h3>Lecturer Portal</h3>
+  <hr>
+
+  <div class="p1">
+    <ul>
+      <li><a href="LecturerDashboard.php" target="contentFrame"><i class="ri-dashboard-line"></i> Dashboard </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p2">
+    <h5>ACADEMIC</h5>
+    <ul>
+      <li><a href="myschedule.php" target="contentFrame"><i class="ri-calendar-schedule-line"></i> My Schedule </a></li>
+      <li><a href="lectureMaterialUpload.php" target="contentFrame"><i class="ri-book-open-line"></i> Manage Lecture Material </a></li>
+      <li><a href="uploadassignment.html" target="contentFrame"><i class="ri-upload-2-line"></i> Upload Assignments </a></li>
+      <li><a href="lecturer_assignments.php" target="contentFrame"><i class="ri-bar-chart-2-line"></i> Gradebook </a></li>
+      <li><a href="404.html" target="contentFrame"><i class="ri-calendar-check-line"></i> Attendance </a></li>
+      <li><a href="404.html" target="contentFrame"><i class="ri-group-line"></i> Student List </a></li>
+      <li><a href="404.html" target="contentFrame"><i class="ri-folder-line"></i> Teaching Resources </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p3">
+    <h5>ADMINISTRATIVE</h5>
+    <ul>
+      <li><a href="404.html" target="contentFrame"><i class="ri-megaphone-line"></i> Make Announcements </a></li>
+      <li><a href="reports.php" target="contentFrame"><i class="ri-file-chart-line"></i> Reports </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p4">
+    <h5>SETTINGS</h5>
+    <ul>
+      <li><a href="lecprofile.php" target="contentFrame"><i class="ri-settings-4-line"></i> Profile </a></li>
+      <li><a href="404.html" target="contentFrame"><i class="ri-notification-2-line"></i> Notification Preferences </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p3">
+    <ul>
+      <li><a href="Login.html"><i class="ri-logout-box-line"></i> Logout </a></li>
+    </ul>
+  </div>
+
+</nav>
+
+
+<div class="Con" id="mainContent">
+
+<iframe name="contentFrame" src="LecturerDashboard.php"></iframe>
+
+</div>
+</div>
+
+<script>
+  function loadContent(page) {
+    document.getElementById("mainContent").innerHTML = `
+      <h1>${page} Page</h1>
+      <p>Here is the content for ${page}.</p>
+    `;
+  }
+</script>
+
+<script src="animation.js"></script>
+
+</body>
+</html>

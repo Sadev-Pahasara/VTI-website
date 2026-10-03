@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin_portal</title>
+    <link rel="stylesheet" href="adminportal.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <!-- icon link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    
+
+</head>
+<body>
+
+<div class="container">
+<nav class="menu" data-aos="fade-right" data-aos-delay="250" data-aos-duration="900">
+
+  <div class="logo">
+    <img src="logo1.1.png" alt="logo">
+    <h5>Empower Knowledge...</h5>
+  </div>
+  
+  <h3>Admin Portal</h3>
+  <hr>
+
+  <div class="p1">
+    <ul>
+      <li><a href="admindashboard.html" target="contentFrame"><i class="ri-dashboard-line"></i> Dashboard </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p2">
+    <h5>STUDENT MANAGEMENT</h5>
+    <ul>
+      <li><a href="managestudent.html" target="contentFrame"> <i class="ri-group-3-line"></i> Manage Students </a></li>
+      <li><a href="studentapproval.html" target="contentFrame"> <i class="ri-file-edit-line"></i> Student Approval </a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-graduation-cap-line"></i> Graduation & Certificates </a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-book-shelf-line"></i> Course Enrollment </a></li>
+    </ul>
+    <hr>
+  </div>
+
+    <div class="p2">
+    <h5>LECTURER MANAGEMENT</h5>
+    <ul>
+      <li><a href="managelecturers.html" target="contentFrame"> <i class="ri-presentation-line"></i> Manage Lecturers </a></li>
+      <li><a href="examboard.html" target="contentFrame"> <i class="ri-calendar-2-line"></i> Lecturer Schedule </a></li>
+      <li><a href="assign-lecturer.php" target="contentFrame"> <i class="ri-booklet-line"></i>  Assign Subjects / Courses </a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-suitcase-line"></i> Performance & Evaluation </a></li>
+    </ul>
+    <hr>
+  </div>
+
+    <div class="p2">
+    <h5>ACADEMIC MANAGEMENT</h5>
+    <ul>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-calendar-2-line"></i> Academic Calendar </a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-file-edit-line"></i> Exams & Results </a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-folders-line"></i> Curriculum / Course Plans</a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-line-chart-fill"></i> Reports & Analytics </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p3">
+    <h5>ADMINISTRATIVE</h5>
+    <ul>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-bank-line"></i> Finance & Billing</a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-megaphone-line"></i> Announcements </a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-building-line"></i> Departments & Faculties</a></li>
+      <li><a href="404.html" target="contentFrame"> <i class="ri-folders-line"></i> Document Management </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p4">
+    <h5>SETTINGS</h5>
+    <ul>
+      <li><a href="404.html" target="contentFrame"><i class="ri-user-3-line"></i> Profile </a></li>
+      <li><a href="404.html" target="contentFrame"><i class="ri-notification-4-line"></i> Notification Settings </a></li>
+      <li><a href="inquiry.html" target="contentFrame"><i class="ri-notification-4-line"></i> Inquiries </a></li>
+      <li><a href="404.html" target="contentFrame"><i class="ri-lock-line"></i> User Roles & Permissions </a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="p3">
+    <ul>
+      <li><a href="Login.html"><i class="ri-logout-circle-line"></i> Logout </a></li>
+    </ul>
+  </div>
+
+</nav>
+
+<div class="Con" id="mainContent">
+
+<iframe name="contentFrame" src="admindashboard.html"></iframe>
+
+</div>
+</div>
+
+<script>
+  function loadContent(page) {
+    document.getElementById("mainContent").innerHTML = `
+      <h1>${page} Page</h1>
+      <p>Here is the content for ${page}.</p>
+    `;
+  }
+</script>
+
+<script src="animation.js"></script>
+
+</body>
+</html>

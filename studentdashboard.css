@@ -1,0 +1,67 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: -10px;
+}
+
+.cards :hover {
+  cursor: pointer;
+}
+
+.card img {
+  margin-top: 25px;
+  background: #aaa6a600;
+  border: #0b0b0b5f 2px solid;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 270px;
+}
+
+.card img:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 270px;
+  background: #aaa6a600;
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+  line-height: 1.2rem;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 10px 10px;
+}
+
+.card:hover .info {
+  opacity: 1;
+}
+
+#studentSchedule {
+  max-width: 90%;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 5px;
+  height: 150px !important;  /* Force height */
+  overflow: hidden;          /* Hide overflow */
+}
+
+.fc .fc-view-harness {
+  height: 150px !important;
+  min-height: 150px !important;
+}

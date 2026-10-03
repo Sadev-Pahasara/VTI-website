@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    
+<section class="reg">
+
+    <div class="left">
+        <img src="welcome 2.jpg" alt="welcomeimg">
+    </div>
+
+<div class="container">
+    <form id="registrationForm" class="form">
+<div class="row1">
+  <div class="input-group half">
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" placeholder="First Name" required>
+  </div>
+  <div class="input-group half">
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" placeholder="Last Name" required>
+  </div>
+</div>
+
+<div class="input-group">
+  <label for="email">Email Address</label>
+  <input type="email" id="email" placeholder="Email Address" required>
+</div>
+
+<div class="input-group">
+  <label for="contact">Contact Number</label>
+  <input type="text" id="contact" placeholder="+94 xx-xxxxxxx" required>
+</div>
+
+<div class="input-group">
+  <label for="whatsapp">Whatsapp Number</label>
+  <input type="text" id="whatsapp" placeholder="+94 xx-xxxxxxx" required>
+</div>
+
+<div class="input-group">
+  <label for="address">Physical Address</label>
+  <textarea id="address" required></textarea>
+</div>
+
+
+      <div class="input-group">
+        <label for="dob">Date of Birth</label>
+        <div class="dob">
+          <select id="month" required>
+            <option value="">Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <select id="day" required>
+            <option value="">Day</option>
+          </select>
+          <select id="year" required>
+            <option value="">Year</option>
+          </select>
+          <span class="calendar-icon">📅</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+</div>
+    
+</section>
+
+
+<script src="reg.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Profile Form</title>
+  <link rel="stylesheet" href="form.css" />
+  <link rel="stylesheet" href="animation.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+<center><h1 data-aos="fade-down" data-aos-delay="350" data-aos-duration="1200">Register Form <i class="ri-quill-pen-ai-fill"></i></h1>
+<hr width="48%" data-aos="fade-down" data-aos-delay="350" data-aos-duration="900">
+</center>
+
+<div class="container" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000">
+   
+  <form action="signup.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+   
+    <div class="profile-header">
+      <div class="profile-pic" id="profilePreview">
+        <img id="uploadedImg" src="#" alt="Profile" style="display: none;" />
+      </div>
+      <div class="profile-actions">
+        <div class="button-row">
+          <button type="button" class="btn yellow" onclick="document.getElementById('imageUpload').click()">Upload your Image</button>
+        </div>
+        <p class="note"> To upload profile pictures, use photos that are ≤ 5MB in size, ≤ 4 * 4 aspect ratio.</p>
+      </div>
+    </div>
+
+    <input type="file" id="imageUpload" name="profile_image" accept="image/*" style="display:none" />
+
+    <div class="form-section">
+      <h2>Student Details <i class="ri-user-line"></i></h2>
+
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First Name" required/>
+        <input type="text" name="last_name" placeholder="Last Name" required/>
+      </div>
+
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Email" required id="email"/>
+        <input type="text" name="username" placeholder="User Name" required id="username">
+      </div>
+
+      <div class="form-row">
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" placeholder="Password" required style="width: 410px;"/>
+          <img src="eye-crossed.png" id="togglePassword" class="toggle-eye" alt="Toggle Eye" />
+        </div>
+        <input type="password" id="confirmpassword" name="confirm_password" placeholder="Confirm Password" required />
+      </div>
+
+      <div class="form-row">
+        <input type="text" name="mobile_number" placeholder="Mobile Number" required/>
+        <input type="text" name="whatsapp_number" placeholder="Whatsapp Number" required/>
+      </div>
+      
+      <div class="form-row">
+        <input type="date" name="date_of_birth" value="2000-01-01" required/>
+        <input type="text" name="nic" placeholder="NIC" required/>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <select name="home_district" required>
+        <option value="" selected disabled>Select Home District</option>
+        <option value="Ampara">Ampara</option>
+        <option value="Anuradhapura">Anuradhapura</option>
+        <option value="Badulla">Badulla</option>
+        <option value="Batticaloa">Batticaloa</option>
+        <option value="Colombo">Colombo</option>
+        <option value="Galle">Galle</option>
+        <option value="Gampaha">Gampaha</option>
+        <option value="Hambantota">Hambantota</option>
+        <option value="Jaffna">Jaffna</option>
+        <option value="Kalutara">Kalutara</option>
+        <option value="Kandy">Kandy</option>
+        <option value="Kegalle">Kegalle</option>
+        <option value="Kilinochchi">Kilinochchi</option>
+        <option value="Kurunegala">Kurunegala</option>
+        <option value="Mannar">Mannar</option>
+        <option value="Matale">Matale</option>
+        <option value="Matara">Matara</option>
+        <option value="Monaragala">Monaragala</option>
+        <option value="Mullaitivu">Mullaitivu</option>
+        <option value="Nuwara Eliya">Nuwara Eliya</option>
+        <option value="Polonnaruwa">Polonnaruwa</option>
+        <option value="Puttalam">Puttalam</option>
+        <option value="Ratnapura">Ratnapura</option>
+        <option value="Trincomalee">Trincomalee</option>
+        <option value="Vavuniya">Vavuniya</option>
+      </select>
+
+      <select name="gender" required>
+        <option value="" selected disabled>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+
+    <hr style="height: 1px;">
+    <div class="form-section">
+      <div class="form-row">
+        <select name="faculty" required>
+          <option value="" selected disabled>Choose Your Faculty</option>
+          <option value="Faculty of Business / Management">Faculty of Business / Management</option>
+          <option value="Faculty of Computing">Faculty of Computing</option>
+          <option value="Faculty of Engineering">Faculty of Engineering</option>
+          <option value="Faculty of Law">Faculty of Law</option>
+          <option value="Faculty of Health Sciences">Faculty of Health Sciences</option>
+          <option value="Faculty of Arts / Humanities">Faculty of Arts / Humanities</option>
+          <option value="Faculty of Creative Arts">Faculty of Creative Arts</option>
+          <option value="Short Courses & Certifications">Short Courses & Certifications</option>
+        </select>
+
+        <select name="enrollment_method" required>
+          <option value="" selected disabled>Choose Your Enrolment Method</option>
+          <option value="Online">Online</option>
+          <option value="Physical">Physical</option>
+        </select>
+
+        <select name="branch" required id="branchSelect">
+          <option value="" selected disabled>Select Your Branch</option>
+          <option value="CMB">Colombo</option>
+          <option value="KDY">Kandy</option>
+          <option value="MTR">Matara</option>
+        </select>
+      </div>
+      
+      <div class="form-row">
+        <select name="program" required>
+          <option value="" selected disabled>Select Your Program</option>
+        </select>
+
+        <select name="intake" required>
+          <option value="" selected disabled>Choose Your Intake</option>
+          <option value="January">January</option>
+          <option value="May">May</option>
+          <option value="September">September</option>
+        </select>
+      </div>
+    </div>
+
+    <p style="font-weight: 600; color: rgb(102, 102, 102);">
+      At Skill Pro Institute, every skill learned, every challenge faced, <br>
+      and every step forward builds the path to success — together, we rise higher. 
+    </p>
+
+    <h4>
+      Your account will be approved in about 2 hours. Thank you for your patience ❤️
+    </h4>
+
+    <div class="form-section">
+      <button type="submit" class="btn red" id="registerBtn">Register</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Image upload preview
+  const imageInput = document.getElementById("imageUpload");
+  const uploadedImg = document.getElementById("uploadedImg");
+
+  imageInput.addEventListener("change", function () {
+    const file = this.files[0];
+    if (file) {
+
+      if (file.size > 5242880) {
+        alert("File size must be less than 5MB");
+        this.value = "";
+        return;
+      }
+      
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        uploadedImg.src = e.target.result;
+        uploadedImg.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Form validation
+  function validateForm() {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmpassword').value;
+    
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return false;
+    }
+    
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long!");
+      return false;
+    }
+    
+    return true;
+  }
+
+  // Disable right click
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+</script>
+
+<script>
+// Get DOM elements
+const facultySelect = document.querySelector('select[name="faculty"]');
+const programSelect = document.querySelector('select[name="program"]');
+const enrollmentSelect = document.querySelector('select[name="enrollment_method"]');
+const branchSelect = document.querySelector('select[name="branch"]');
+
+// Function to load branches with codes
+function loadBranches() {
+    // Set static branches with codes
+    const branches = [
+        { code: 'CMB', name: 'Colombo' },
+        { code: 'KDY', name: 'Kandy' },
+        { code: 'MTR', name: 'Matara' }
+    ];
+    
+    branchSelect.innerHTML = '<option value="" selected disabled>Select Your Branch</option>';
+    branches.forEach(branch => {
+        const option = document.createElement('option');
+        option.value = branch.code; // This is what will be saved to database
+        option.textContent = branch.name; // This is what user sees
+        branchSelect.appendChild(option);
+    });
+}
+
+// Function to load faculties based on enrollment method
+function loadFaculties(enrollmentMethod) {
+    const url = enrollmentMethod ? `get_faculties.php?enrollment_method=${enrollmentMethod}` : 'get_faculties.php';
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            facultySelect.innerHTML = '<option value="" selected disabled>Choose Your Faculty</option>';
+            data.forEach(faculty => {
+                const option = document.createElement('option');
+                option.value = faculty.faculty;
+                option.textContent = faculty.faculty;
+                facultySelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error loading faculties:', error));
+}
+
+// Function to load programs based on selected faculty
+function loadPrograms(faculty) {
+    if (!faculty) {
+        programSelect.innerHTML = '<option value="" selected disabled>Select Your Program</option>';
+        return;
+    }
+    
+    fetch(`get_programs.php?faculty=${encodeURIComponent(faculty)}`)
+        .then(response => response.json())
+        .then(data => {
+            programSelect.innerHTML = '<option value="" selected disabled>Select Your Program</option>';
+            data.forEach(program => {
+                const option = document.createElement('option');
+                option.value = program.course_Name;
+                option.textContent = program.course_Name;
+                programSelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error loading programs:', error));
+}
+
+// Event listeners
+enrollmentSelect.addEventListener('change', function() {
+    loadFaculties(this.value);
+    programSelect.innerHTML = '<option value="" selected disabled>Select Your Program</option>';
+});
+
+facultySelect.addEventListener('change', function() {
+    loadPrograms(this.value);
+});
+
+// Load initial data when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadBranches();
+    loadFaculties();
+});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="form.js"></script>
+<script src="animation.js"></script>
+</body>
+</html>

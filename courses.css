@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  background: url('bg3.jpg') center/cover no-repeat fixed;
+  overflow-x: hidden;
+}
+
+
+.faculty img {
+  width: 93%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.faculty h1 {
+  font-size: 2.5rem;
+  margin-top: -10px;
+  text-align: center;
+}
+
+.first {
+  width: 100%;
+  max-width: 1740px;
+  line-height: 1.5rem;
+  background-color: rgba(240, 248, 255, 0.3);
+  border: 2px solid rgba(135, 135, 135, 0.248);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.15);
+}
+
+.location {
+  margin-top: 50px;
+}
+
+.f1 {
+  flex: 1 1 600px;
+}
+
+.logo i {
+  font-size: 2rem;
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+.location .fac {
+  display: flex;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.details {
+  margin-left: 20px;
+  display: flex;
+}
+
+.details ul li {
+  margin-top: -15px;
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10px;
+  background: #00412E;
+  border: 2px solid #969696;
+  transition: all .3s ease-in-out;
+}
+
+button a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+button:hover {
+  background: #01bb83;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.3));
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1740px;
+  min-height: 300px;
+  background: #145A32;
+  margin: 50px auto 5px;
+  transition: all .6s ease;
+  border: 2px solid #59FF00;
+  border-radius: 25px;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.3));
+  padding: 20px;
+}
+
+.ftrp2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ftrp2 .quicklinks {
+  display: flex;
+  gap: 40px;
+  margin: 20px 60px;
+}
+
+.ftrp2 .quicklinks h4 {
+  color: azure;
+}
+
+.ftrp2 .quicklinks ul li {
+  list-style-type: none;
+  margin-left: -45px;
+  line-height: 2rem;
+}
+
+.ftrp2 .quicklinks ul li a {
+  text-decoration: none;
+  color: azure;
+}
+
+.ftrp2 .quicklinks ul li a:hover {
+  color: rgb(0, 233, 0);
+}
+
+.ftr:hover {
+  box-shadow: 0 0px 35px #59ff005b;
+}
+
+.bottomftr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bottomftr .ls {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin: 10px;
+}
+
+.bottomftr .ls h4 {
+  margin-left: 5px;
+}
+
+.bottomftr .ls p {
+  max-width: 500px;
+  margin: 10px 5px;
+  font-size: 1rem;
+  color: #bab9b9;
+}
+
+.bottomftr .ls .follow ul {
+  margin-top: 20px;
+  display: flex;
+  color: azure;
+  list-style-type: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bottomftr .ls .follow ul a {
+  text-decoration: none;
+  color: azure;
+}
+
+.bottomftr .ls .follow ul a i {
+  font-size: 1.8rem;
+  transition: color 0.2s ease-in-out, all .3s ease-in-out;
+}
+
+.bottomftr .ls .follow ul a i:hover {
+  color: #2ECC71;
+}
+
+.bottomhr {
+  width: 95%;
+  color: azure;
+  margin: 20px auto;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.copyright:hover {
+  color: rgb(194, 194, 194);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff2f;
+  border-radius: 10px;
+  border: #003e0b 1px solid;
+}
+
+@media (max-width: 1200px) {
+  .faculty h1 {
+    font-size: 2rem;
+  }
+  .ftrp2 .quicklinks {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .first {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .details {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .faculty h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    max-width: 100%;
+  }
+  footer {
+    padding: 15px;
+  }
+  .bottomftr {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+  .faculty img {
+    width: 100%;
+  }
+  .faculty h1 {
+    font-size: 1.5rem;
+  }
+  .first {
+    padding: 15px;
+  }
+  .ftrp2 .quicklinks {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .bottomftr .ls p {
+    width: 100%;
+  }
+}

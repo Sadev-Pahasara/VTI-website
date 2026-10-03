@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>Dashboard</h1>
+      <div class="dropdown">
+        <button class="quick-btn"><i class="ri-add-line"></i> Quick Action</button>
+        <div class="dropdown-content">
+            <a href="managestudent.html">Manage Student</a>
+            <a href="managelecturers.html">Manage Lecturer</a>
+            <a href="#">Add Course</a>
+            <a href="#">Post Announcement</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Students</h3>
+        <p id="students">1200</p>
+      </div>
+      <div class="card">
+        <h3>Total Lecturers</h3>
+        <p id="lecturers">85</p>
+      </div>
+      <div class="card">
+        <h3>Active Courses</h3>
+        <p id="courses">40</p>
+      </div>
+      <div class="card">
+        <h3>Pending Fees</h3>
+        <p id="fees">$10,500</p>
+      </div>
+    </div>
+
+    
+    <div class="chart">
+    <canvas id="myChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="admindashboard.js"></script>
+</body>
+</html>

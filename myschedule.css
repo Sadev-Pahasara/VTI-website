@@ -1,0 +1,62 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url('bg1.jpg') center/cover no-repeat;
+  margin: 0;
+  padding: 20px;
+  height: 1060px;
+}
+
+.schedule-container {
+  max-width: 1200px;
+  margin-top: 150px;
+  margin-left: 200px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.271);
+  backdrop-filter: blur(10px);
+}
+
+.schedule-container h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #13630b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+}
+
+.schedule-table th, .schedule-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  min-width: 120px;
+}
+
+.schedule-table th {
+  background: #0c7702;
+  color: #fff;
+  font-weight: bold;
+}
+
+.schedule-table td {
+  background: #fafafa;
+}
+
+.schedule-table td.class {
+  background: #e6f2ff;
+  font-weight: 600;
+  color: #086e1e;
+  border-left: 4px solid #13630b;
+}
